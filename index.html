@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <script src="tailwindcss.js"></script>
+        <title>BookMaster</title>
+    </head>
+    <body>
+        <header>
+            <h1 class="text-4xl font-bold">Book<span class="text-yellow-300">Master</span></h1>
+            <p class="text-md">Experts in booking</p>
+        </header>
+        <section id="main" class="flex justify-center">
+            <div id="datePicker" class="w-2/5 h-2/6 py-5 px-6 rounded-xl">
+                <h2 class="text-2xl font-bold">Choose your stay length</h2>
+                <div class="flex justify-center gap-5">
+                    <div>
+                        <p>Check-in date</p>
+                        <input type="date" name="checkin-date" id="checkin-date" onchange="updateCheckOutMinDate()">
+                    </div>
+                    <div>
+                        <p>Check-out date</p>
+                        <input type="date" name="checkout-date" id="checkout-date">
+                    </div>             
+                    <div>
+                        <p>Guests</p>
+                        <input type="number" name="guests" id="guests" min="1" max="2" value="1">
+                    </div>
+                </div>
+                <div class="flex justify-center">
+                    <button id="search" onclick="checkAvailability()">
+                        Check availability
+                    </button>
+                </div>
+            </div>
+        </section>
+        <script src="code.js"></script>
+    </body>
+</html>
